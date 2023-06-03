@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
+    <link href="https://cdn.tailwindcss.com/2.2.16/tailwind.min.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+
+
+    <link rel="icon" type="image/x-icon" href="static/bg.jpg">
+
+
+
+  </head>
+  <body>
+  
+
+
+<section class="section">
+        <div class="container center" >
+            <div class="">
+            	<div class="card-overlay"></div>
+                <header class="card-header">
+
+
+
+                    <p class="card-header-title text-primary display-4">
+                        Enter a Movie Title
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <form action="/" method="POST">
+                            <div class="field">
+                                
+                                <div class="control">
+                                    <input style="background-color: rgba(110, 130, 150,0.2);" id="inputfield" class="bg-light input " type="text" name="movie" placeholder="Movie Title" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary" type="submit">Recommend</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            {% if datam %}
+                <div class="">
+
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Recommended Movies
+                        </p>
+                    </header>
+                    <div class="card-content">
+
+                        <div class="bg-light content">
+                            <ul>
+                                {% for movie in datam %}
+                                    <li>{{ movie }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+  
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+       	Need movie recommendation?
+      </h1>
+      <h2>Enter a Movie Title</h2>
+    <form action="/" method="POST">
+        <input type="text" name="movie" placeholder="Movie Title" required>
+        <button type="submit">Submit</button>
+    </form>
+
+      <p class="subtitle">
+         <strong>Enjoy</strong>!
+      </p>
+      {% if datam %}
+        <ul>
+            {% for movie in datam %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recommendations found.</p>
+    {% endif %}
+
+    </div>
+  </section>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Recommend the Movie</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+</head>
+<body>
+    <h2>It's working</h2>
+    {% if datam %}
+        <ul>
+            {% for movie in datam %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recommendations found.</p>
+    {% endif %}
+</body>
+</html> -->
